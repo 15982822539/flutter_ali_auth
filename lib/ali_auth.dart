@@ -46,6 +46,10 @@ class AliAuth {
     return AliAuthPlatform.instance.getCurrentCarrierName();
   }
 
+  static Future<String> simSupportedIsOK() async {
+    return AliAuthPlatform.instance.simSupportedIsOK();
+  }
+
   /// pageRoute
   static Future<void> openPage(String? pageRoute) async {
     return AliAuthPlatform.instance.openPage(pageRoute);

@@ -95,6 +95,11 @@ bool bool_false = false;
     // 获取当前上网卡运营商名称，比如中国移动、中国电信、中国联通
     result([[TXCommonUtils init] getCurrentCarrierName]);
   }
+  else if ([@"simSupportedIsOK" isEqualToString:call.method]) {
+      BOOL isSupported = [TXCommonUtils simSupportedIsOK];
+      NSString *resultString = isSupported ? @"YES" : @"NO";
+      result(resultString);
+  }
   // 初始化SDK
   else if ([@"initSdk" isEqualToString:call.method]) {
     _isHideToast = [call.arguments boolValueForKey: @"isHideToast" defaultValue: NO];

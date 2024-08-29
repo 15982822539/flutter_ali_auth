@@ -70,6 +70,11 @@ class MethodChannelAliAuth extends AliAuthPlatform {
     return await methodChannel.invokeMethod('getCurrentCarrierName');
   }
 
+  @override
+  Future<String> simSupportedIsOK() async {
+    return await methodChannel.invokeMethod('simSupportedIsOK');
+  }
+
   /// pageRoute
   @override
   Future<void> openPage(String? pageRoute) async {
