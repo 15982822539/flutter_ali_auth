@@ -93,7 +93,7 @@ bool bool_false = false;
   }
   else if ([@"getCurrentCarrierName" isEqualToString:call.method]) {
     // 获取当前上网卡运营商名称，比如中国移动、中国电信、中国联通
-    result([[TXCommonUtils init] getCurrentCarrierName]);
+    result([TXCommonUtils getCurrentCarrierName]);
   }
   else if ([@"simSupportedIsOK" isEqualToString:call.method]) {
       BOOL isSupported = [TXCommonUtils simSupportedIsOK];
