@@ -50,6 +50,14 @@ class AliAuth {
     return AliAuthPlatform.instance.simSupportedIsOK();
   }
 
+  static Future<String> getUniqueID() async {
+    return AliAuthPlatform.instance.getUniqueID();
+  }
+
+  static Future<String> getMobilePrivateIPAddress() async {
+    return AliAuthPlatform.instance.getMobilePrivateIPAddress();
+  }
+
   /// pageRoute
   static Future<void> openPage(String? pageRoute) async {
     return AliAuthPlatform.instance.openPage(pageRoute);

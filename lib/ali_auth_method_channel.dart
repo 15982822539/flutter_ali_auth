@@ -75,6 +75,16 @@ class MethodChannelAliAuth extends AliAuthPlatform {
     return await methodChannel.invokeMethod('simSupportedIsOK');
   }
 
+  @override
+  Future<String> getUniqueID() async {
+    return await methodChannel.invokeMethod('getUniqueID');
+  }
+
+  @override
+  Future<String> getMobilePrivateIPAddress() async {
+    return await methodChannel.invokeMethod('getMobilePrivateIPAddress');
+  }
+
   /// pageRoute
   @override
   Future<void> openPage(String? pageRoute) async {

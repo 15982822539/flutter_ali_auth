@@ -100,6 +100,14 @@ bool bool_false = false;
       NSString *resultString = isSupported ? @"YES" : @"NO";
       result(resultString);
   }
+  else if ([@"getUniqueID" isEqualToString:call.method]) {
+      // 唯一id
+      result([TXCommonUtils getUniqueID]);
+  }
+  else if ([@"getMobilePrivateIPAddress" isEqualToString:call.method]) {
+      NSString *resultString = [TXCommonUtils getMobilePrivateIPAddress:YES];
+      result(resultString);
+  }
   // 初始化SDK
   else if ([@"initSdk" isEqualToString:call.method]) {
     _isHideToast = [call.arguments boolValueForKey: @"isHideToast" defaultValue: NO];
